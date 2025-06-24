@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emotion Result</title>
+</head>
+<body>
+    <h1>Detected Emotions</h1>
+    {% if emotions.error %}
+        <p style="color: red;">Error: {{ emotions.error }}</p>
+    {% else %}
+        <ul>
+            {% for emotion, score in emotions.items %}
+                <li>{{ emotion }}: {{ score|floatformat:2 }}%</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    <a href="/">Try Another</a>
+</body>
+</html>
