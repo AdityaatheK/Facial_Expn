@@ -1,0 +1,24 @@
+# Ignore Python virtual environments
+venv/
+Lib/
+__pycache__/
+*.pyc
+
+# Ignore model binaries and compiled files
+*.pyd
+*.so
+*.h5
+*.pb
+
+# Ignore builds and temp files
+build/
+dist/
+*.log
+*.sqlite3
+
+# VSCode
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
